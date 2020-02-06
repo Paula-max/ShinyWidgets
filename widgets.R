@@ -21,14 +21,14 @@ ui<- fluidPage(
            ), 
     column(3, 
            h4("Checkbox"),
-           #Si value está a true el checkbox estará marcado por defecto
+           #si value está a true el checkbox estará marcado por defecto
            checkboxInput(inputId = "Checkbox", 
                          label = "Mostrar", value = T)),
     column(3, 
            h4("Checkgroup"),
            #se pueden selecionar más de un checkbox (no excluyentes)
-           #el parámetro seleced para decidir si un checkbox aparece marcado por defecto
-           #el parametro inline permite seleccionar si las checkbox se colocan en linea(T)
+           #el parámetro selected para decidir si un checkbox aparece marcado por defecto
+           #el parametro inline permite seleccionar si las checkbox se colocan en linea
            checkboxGroupInput(inputId = "checkgroup", 
                               label = h5("Seleciciona una o varias opciones"), 
                               choices = list("Opción 1" = 1,
@@ -48,8 +48,8 @@ ui<- fluidPage(
     column(3, 
            h4("Rango de fechas"),
            #start y end están a NULL por defecto y se muestra la fecha actual
-           #el atributo separator nos permite cambiar la palabra to 
-           #el parámetro language te permite poner el calendario en español "es"(español)
+           #el atributo separator nos permite cambiar la palabra que está en medio de ambas fechas 
+           #el parámetro language te permite poner el calendario en español "es"
            dateRangeInput(inputId = "RangoFechas",
                           label = h5("Elige una fecha de inicio y otra de fin"), 
                           start= NULL, end = NULL,
@@ -59,7 +59,7 @@ ui<- fluidPage(
     column(3,
            h4("Ficheros"),
            #el parámetro buttonlabel te permite cambiar el nombre del botón o poner un icono
-           #multiple te permite subir varios ficheros (T)
+           #multiple te permite subir varios ficheros
            fileInput(inputId = "fichero",
                      label = h5("Selecciona un fichero o ficheros para subir"),
                      buttonLabel = icon("folder-open"),
